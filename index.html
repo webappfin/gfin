@@ -1,1 +1,251 @@
-gfin
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CofreAdmin - Carteira Digital + Web3 + Gestão</title>
+    
+    <!-- Metatags SEO -->
+    <meta name="description" content="Carteira digital Web3 & Gerenciador financeiro. Envie e receba pagamentos. Organize, poupe e acompanhe suas finanças de forma simples e direta.">
+    <meta name="keywords" content="finanças, web3, carteira digital, cofreadmin, gfin, usdc, blockchain, metas financeiras, geração z, geração alpha">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0c1b 0%, #1a102f 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 22px;
+            text-align: center;
+        }
+
+        /* Caixa do Banner Centralizado */
+        .banner-box {
+            width: 100%;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 12px;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+            border: 2px solid rgba(0, 230, 118, 0.4);
+        }
+
+        .banner-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+        }
+
+        /* Área de Ações: Botão + QR Code Maior */
+        .action-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #00e676 0%, #00b0ff 100%);
+            color: #0d0d0d;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.15rem;
+            padding: 16px 32px;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 230, 118, 0.6);
+        }
+
+        /* QR Code Maior ao lado */
+        .qrcode-wrapper {
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            border: 2px solid #8a2be2;
+        }
+
+        .qrcode-wrapper img {
+            width: 85px;
+            height: 85px;
+            display: block;
+        }
+
+        .qrcode-text {
+            text-align: left;
+            color: #1a1a1a;
+            font-size: 0.8rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .qrcode-text span {
+            color: #8a2be2;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        /* Seção detalhada para passar confiança ao Google */
+        .description-box {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 22px;
+            text-align: left;
+            backdrop-filter: blur(10px);
+        }
+
+        .description-box h3 {
+            font-size: 1.15rem;
+            color: #00e676;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .description-box p {
+            font-size: 0.92rem;
+            color: #d1d5db;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        /* Rodapé interno com links de confiança (Termos e Suporte) */
+        .trust-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+        }
+
+        .trust-footer .badges {
+            display: flex;
+            gap: 15px;
+            color: #9ca3af;
+        }
+
+        .trust-footer a {
+            color: #00e676;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .trust-footer a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 650px) {
+            .action-section {
+                flex-direction: column;
+            }
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+            }
+            .qrcode-wrapper {
+                width: 100%;
+                justify-content: center;
+            }
+            .trust-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Banner Oficial na Raiz -->
+        <div class="banner-box">
+            <img src="banner.png" alt="Cofre Admin - Seja o admin da sua grana">
+        </div>
+
+        <!-- Botão de Acesso + QR Code Maior -->
+        <div class="action-section">
+            <a href="https://cofreadmin.gfin.app" target="_blank" class="cta-button">
+                🚀 Acessar Cofre Admin
+            </a>
+
+            <div class="qrcode-wrapper">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://cofreadmin.gfin.app" alt="QR Code Cofre Admin">
+                <div class="qrcode-text">
+                    <span>Aponte a câmera</span>
+                    e entre no app!
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloco de Descrição -->
+        <div class="description-box">
+            <h3>💡 Sobre o Cofre Admin</h3>
+            <p>
+                O <strong>CofreAdmin</strong> é um APP inovador que une a agilidade da <strong>Carteira Web3</strong> com o controle inteligente de um <strong>Gerenciador Financeiro</strong>. Projetado para a nova geração, o app permite que você envie e receba pagamentos em dólar digital (USDC), além de organizar, poupar e acompanhar todas as suas receitas e despesas de forma gamificada, simples e direta.
+            </p>
+            <p>
+                Nossa missão é democratizar o acesso à gestão financeira descentralizada, oferecendo ferramentas automatizadas como cofres personalizados por metas, relatórios inteligentes e máxima segurança para os seus ativos.
+            </p>
+
+            <!-- Rodapé de Transparência e Suporte -->
+            <div class="trust-footer">
+                <div class="badges">
+                    <span>🔒 Ambiente Criptografado</span>
+                    <span>🌐 Powered by Web3</span>
+                </div>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://docs.google.com/document/d/e/2PACX-1vQ7bA6qU0EPpz5AeLGsE4UsreeEL8Jw3gZwddP7ji6RJ9Cm3gf15roQd1AYy9Wx_tAeoBsGlBFoVHu2/pub" target="_blank">📄 Termos de Uso</a>
+                    <a href="mailto:suporte.gfin.app@gmail.com">✉️ Contato / Suporte</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
