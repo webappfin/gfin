@@ -1,1 +1,1 @@
-# gfin
+# gfin.app
